@@ -67,7 +67,6 @@
     min-height: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
     padding: 1rem;
     box-sizing: inherit;
     position: relative;
@@ -79,8 +78,8 @@
 
   .content {
     width: 100%;
-    max-width: 700px;
     margin-bottom: 3rem;
+    background-color: #EAEDED;
   }
 
   .content h1 h3 {
@@ -92,8 +91,55 @@
   }
 
   .content-options {
-    margin-top: 2rem;
+    margin-top: 1rem;
     display: flex;
+  }
+
+  hr.solid {
+    border-top: 1px solid #bbb;
+  }
+
+  .select {
+    width: 70%;
+    padding: 1rem;
+    background-color: #D5DBDB;
+  }
+
+  .select-one {
+    width: 100%;
+    padding: 0.3rem;
+    background-color: #D5DBDB;
+  }
+
+  .select-two {
+    width: 100%;
+    padding: 0.3rem;
+    background-color: #D5DBDB;
+  }
+
+  .button {
+    width: 60%;
+    padding: 1rem;
+    text-align: right;
+    background-color: #D5DBDB;
+  }
+
+  .button-new {
+    padding: 0.3rem;
+    background-color: #D5DBDB;
+    
+  }
+
+  table-content {
+    width: 100%;
+    padding: 1rem;
+    background-color: #FDFEFE;
+  }
+
+  table {
+    width: 100%;
+    background-color: #FDFEFE;
+    text-align: center;
   }
 
   @media screen and (max-width: 850px) {
@@ -112,26 +158,31 @@
       <h1>Administración de usuarios</h1>
     </div>
     <div class="content-options">
-      <div>
-        <select name="select">
+      <div class="select">
+        <select name="select-one" class="select-one">
+          <option value="value0" selected>Seleccione un Departamento</option>
           <option value="value1">Value 1</option>
-          <option value="value2" selected>Value 2</option>
+          <option value="value2">Value 2</option>
           <option value="value3">Value 3</option>
         </select>
       </div>
-      <div>
-        <select name="select">
+      <div class="select">
+        <select name="select-two" class="select-two">
+          <option value="value0" selected>Seleccione un Cargo</option>
           <option value="value1">Value 1</option>
-          <option value="value2" selected>Value 2</option>
+          <option value="value2">Value 2</option>
           <option value="value3">Value 3</option>
         </select>
       </div>
-      <div>
-        <button name="button">Crear nuevo usuario</button>
+      <div class="button">
+        <button class="button-new" name="button-new">Crear nuevo usuario</button>
       </div>
     </div>
     <div>
-      <table>
+      <hr class="solid">
+    </div>
+    <div class="table-content">
+      <table class="table">
         <thead>
           <tr>
             <th>Usuario</th>
